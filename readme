@@ -1,1 +1,4 @@
 This Repository Contains Basic LLM projects
+My First LLM Project: A Tiny Transformer Language Model
+
+This repository starts with a small language model built from scratch to see how a Transformer predicts the next token. The notebook notebooks/tiny_transformer_language_model.ipynb trains a decoder-only network on a short built-in text, one character at a time. Characters become embeddings, causal self-attention lets each position use only the characters before it, and the training loss is the cross-entropy of the next character. The file already includes plots of the character counts and the causal mask. Running the later cells adds the loss curve, an attention map for a short prompt, and a generated sample. The model is small enough that the whole path from text to generated characters fits in one notebook and can run on a CPU.
