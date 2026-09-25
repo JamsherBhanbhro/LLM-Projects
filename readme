@@ -2,3 +2,8 @@ This Repository Contains Basic LLM projects
 My First LLM Project: A Tiny Transformer Language Model
 
 This repository starts with a small language model built from scratch to see how a Transformer predicts the next token. The notebook notebooks/tiny_transformer_language_model.ipynb trains a decoder-only network on a short built-in text, one character at a time. Characters become embeddings, causal self-attention lets each position use only the characters before it, and the training loss is the cross-entropy of the next character. The file already includes plots of the character counts and the causal mask. Running the later cells adds the loss curve, an attention map for a short prompt, and a generated sample. The model is small enough that the whole path from text to generated characters fits in one notebook and can run on a CPU.
+
+
+Pakistan Airlines Crash Analysis Using an NLP Naive Bayes Classifier
+
+The notebook Pakistan_Airlines_Crash_analysis_using_NLP_Naive_bayes_classifier.ipynb is the analysis from my paper on Pakistan Airlines crashes. It reads historical crash records and first summarizes them with plots of crashes and fatalities by year, operator, aircraft type, and military versus non-military flights. The written accident summaries are then turned into cause labels: regular expressions mark reports that mention weather, fire, being shot down, stall or runway events, pilot or crew error, and systems failure, and a TextBlob Naive Bayes classifier trained on those labeled summaries assigns a cause to the remaining reports. The notebook closes with the share of crashes and fatalities under each cause, and with the departure and destination cities that show up most often in the routes.
